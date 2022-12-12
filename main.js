@@ -103,8 +103,8 @@ const ShowMsgs=()=>{
     if(arr1[0]==ph && arr1[1]==a.innerText){
         console.log("if Morning");
         document.getElementById("timeMsg1").innerText="Good Morning"
-        document.getElementById("timeMsg2").innerHTML="<h2> Its Time To Wake Up</h2>"
-        document.getElementById('images').style.backgroundImage = "url('./images/mrng.img.png')"
+        document.getElementById("timeMsg2").innerHTML="<h2>Hey Its Time To Wake Up</h2>"
+        document.getElementById('images').style.backgroundImage = "url('./images/mrng.png')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
         document.getElementById('images').innerText = " ";
@@ -123,8 +123,8 @@ const ShowMsgs=()=>{
     else if(arr3[0]==ph && arr3[1]==a.innerText){
         console.log("if Nap");
         document.getElementById("timeMsg1").innerText="Good Evening"
-        document.getElementById("timeMsg2").innerHTML="<h2>Time to take a helathy coffee</h2>"
-        document.getElementById('images').style.backgroundImage = "url('./images/evng.img.png')"
+        document.getElementById("timeMsg2").innerHTML="<h2>Time to take a nap</h2>"
+        document.getElementById('images').style.backgroundImage = "url('./images/evng.png')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
         document.getElementById('images').innerText = " ";
@@ -132,24 +132,24 @@ const ShowMsgs=()=>{
     
     else if(arr4[0]==ph && arr4[1]==a.innerText){
         console.log("if night");
-        console.log(arr4[1]);
+        
         document.getElementById("timeMsg1").innerText="Good Night"
         document.getElementById("timeMsg2").innerHTML="<h2>Its Night Time,Close Your Eyes And Sleep</h2>"
-        document.getElementById('images').style.backgroundImage = "url('./images/naptime.img.png')"
+        document.getElementById('images').style.backgroundImage = "url('./images/night.png')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
         document.getElementById('images').innerText = " ";
     }
     else{
         document.getElementById("timeMsg1").innerText="Welcome"
-        document.getElementById("timeMsg2").innerHTML="<h2>select Time and Click on Button to Start</h2>"
+        document.getElementById("timeMsg2").innerHTML="<h2>Choose Time and Click on Button to Start</h2>"
         document.getElementById('images').style.backgroundImage = "url('')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
-       
+    }
     setInterval(ShowMsgs  ,108000)
 }
-}
+
 
 let btn=document.getElementById('setAlarmBtn');
 btn.addEventListener("click", ShowAlarmTime);
